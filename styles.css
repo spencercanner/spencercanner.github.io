@@ -34,11 +34,12 @@ h3 {
 
 
 .top {
-    background: url("spencercannerme/IMG_1486.JPG") no-repeat center center fixed;
+    background: url("IMG_1486.JPG") no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     width: 100vw;
     vertical-align: middle;
+    z-index: 99;
 }
 
 
