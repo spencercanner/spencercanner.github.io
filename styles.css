@@ -32,7 +32,6 @@ h3 {
 
 }
 
-
 .top {
     background: url("IMG_1486.JPG") no-repeat center center fixed;
     background-size: cover;
@@ -41,8 +40,6 @@ h3 {
     vertical-align: middle;
     z-index: 99;
 }
-
-
 
 .topContainer {
     top: 25%;
@@ -56,23 +53,21 @@ h3 {
 }
 
 .name {
-    text-align: left;
+    text-align: center;
     width: 100%;
     font-family: 'Pacifico', sans-serif;
-    font-size: 50px;
+    font-size: 70px;
     color: white;
 }
 
 .description {
     /*left: 20%;*/
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
     font-family: 'Oswald', sans-serif;
     color: white;
 
 }
-
-
 
 .title {
     float: left;
@@ -85,7 +80,6 @@ h3 {
     transform: translateY(-50%);
 }
 
-
 .menuimg {
     float: left;
     position: relative;
@@ -93,8 +87,6 @@ h3 {
     max-width: 100%;
 
 }
-
-
 
 .main {
     width: 100%;
@@ -110,4 +102,28 @@ h3 {
     margin-left: auto;
     padding-left: 150px;
     padding-right: 150px;
+}
+
+
+.bottom {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: #F2F2F2;
+    height: 80px;
+}
+
+.bottomText {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Safari */
+    transform: translateY(-50%);
+}
+
+
+.bottomIcon {
+    height: 20px;
+    max-width: 100%;
 }
