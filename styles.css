@@ -1,6 +1,7 @@
 /*http://paletton.com/#uid=53A0u0kllll-0wZrmqSfkfO9lam*/
 
 @media screen and (max-width: 991px) {
+
     body .header {
         margin-top: 25px;
     }
@@ -12,6 +13,7 @@
     }
 }
 @media screen and (max-width: 500px) {
+
     body .wrap {
         background-attachment: fixed;
     }
