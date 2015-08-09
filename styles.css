@@ -1,5 +1,26 @@
 /*http://paletton.com/#uid=53A0u0kllll-0wZrmqSfkfO9lam*/
 
+@media screen and (max-width: 991px) {
+    body .header {
+        margin-top: 25px;
+    }
+
+    body .content {
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-top: 40px;
+    }
+}
+@media screen and (max-width: 500px) {
+    body .wrap {
+        background-attachment: scroll;
+    }
+    body .content {
+        padding-top: 25px;
+        font-size: 15px;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -16,6 +37,18 @@ h1 {
 h3 {
     font-size: 25px;
     font-family: 'Oswald', sans-serif;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.bigIcon {
+    font-size: 50px;
+    color: #000;
+    margin-right: 20px;
+
 }
 
 .wrap {
