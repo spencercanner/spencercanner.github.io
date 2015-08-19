@@ -31,19 +31,27 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+div {
+    padding: 0;
+    margin: 0;
+}
+
 h1 {
     font-family: 'Pacifico', sans-serif;
-    font-size: 60px;
+    font-size: 55px;
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
 h3 {
-    font-size: 25px;
-    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-family: 'Ubuntu Light', sans-serif;
+    margin: 0;
 }
 
 h4 {
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-family: 'Ubuntu Light', sans-serif;
 }
 
 .bigIcon {
@@ -68,7 +76,7 @@ h4 {
 }
 
 .top {
-    background: url("IMG_1486.JPG") no-repeat center center fixed;
+    background: url("stars.jpg") no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -82,7 +90,7 @@ h4 {
     height: auto;
     margin: auto;
     position: relative;
-    top: 42%;
+    top: 50%;
     text-align: right;
     transform: translateY(-50%);
 }
@@ -98,8 +106,8 @@ h4 {
 .description {
     /*left: 20%;*/
     text-align: center;
-    font-size: 60px;
-    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
     color: white;
 }
 
@@ -139,8 +147,16 @@ h4 {
 .container {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 150px;
-    padding-right: 150px;
+}
+
+.even {
+    background-color: #E1E1E1;
+    padding: 50px 150px;
+}
+
+.odd {
+    background-color: #ebebeb;
+    padding: 50px 150px;
 }
 
 
@@ -148,7 +164,7 @@ h4 {
     text-align: center;
     width: 100%;
     height: auto;
-    background-color: #F2F2F2;
+    background-color: #ebebeb;
     height: 80px;
 }
 
