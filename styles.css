@@ -71,7 +71,7 @@ h4 {
 
 .topContainer {
     position: relative;
-    top: 35%;
+    top: 30%;
 
 }
 
@@ -106,6 +106,8 @@ h4 {
     top: 50%;
     transform: translateY(-50%);
 }
+
+
 
 .menuimg {
     float: left;
