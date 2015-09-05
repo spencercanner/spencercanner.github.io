@@ -96,6 +96,15 @@ h4 {
     padding-right: 5%;
 }
 
+.center {
+    text-align: center;
+}
+
+.screenshot {
+    width: 20%;
+    margin: 2.2%;
+}
+
 .title {
     float: left;
     margin-left: 7%;
@@ -145,7 +154,7 @@ h4 {
 .bottom {
     text-align: center;
     width: 100%;
-    background-color: #ebebeb;
+    background-color: #E1E1E1;
     height: 80px;
 }
 
