@@ -21,6 +21,12 @@ h1 {
     margin-bottom: 25px;
 }
 
+h2 {
+    font-size: 30px;
+    font-family: 'Ubuntu Light', sans-serif;
+    margin: 0;
+}
+
 h3 {
     font-size: 20px;
     font-family: 'Ubuntu Light', sans-serif;
