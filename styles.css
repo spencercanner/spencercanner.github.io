@@ -65,10 +65,9 @@ h4 {
 .topBackground {
     width: 100vw;
     height: 100vh;
-    min-height: 360px;
     background: url("orion.jpeg") no-repeat center center fixed;
     background-size: cover;
-    position: fixed;
+    vertical-align: middle;
     z-index: -99;
 }
 
@@ -215,10 +214,13 @@ h4 {
     .description{
         font-size:26px;
     }
-    .screenshot {
-        width: 50%;
-    }
+    /*.screenshot {*/
+        /*width: 50%;*/
+    /*}*/
     h3 {
-        font-size: 25px;
+        font-size: 30px;
+    }
+    .innerContent {
+        padding: 0;
     }
 }
