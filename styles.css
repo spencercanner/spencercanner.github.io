@@ -66,6 +66,9 @@ h4 {
     width: 100vw;
     height: 100vh;
     background: url("orion.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    vertical-align: middle;
+    display: table-cell;
     z-index: -99;
 }
 
