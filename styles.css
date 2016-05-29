@@ -65,14 +65,12 @@ h4 {
     width: 100vw;
     height: 100vh;
     text-align: center;
-    /*background: url("orion.jpeg") no-repeat center center fixed;*/
+    background-image:url('orion.jpeg');
+    background-repeat:no-repeat;
+    background-position:center;
     background-size: cover;
     position: fixed;
     z-index: -1;
-}
-
-.topImage{
-    width: 100vw;
 }
 
 .topContainer {
@@ -96,9 +94,6 @@ h4 {
     z-index: 2;
 }
 
-#c {
-    z-index: 1;
-}
 .name {
     text-align: center;
     width: 100%;
@@ -229,7 +224,6 @@ h4 {
         letter-spacing:0;
     }
 }
-
 
 
 @media only screen and (max-device-width: 480px) {
