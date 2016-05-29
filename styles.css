@@ -80,6 +80,20 @@ h4 {
 
 }
 
+.topIcon {
+    text-align: center;
+    position: relative;
+    top: 40%;
+}
+
+.personalIcon {
+    width: 30px;
+    z-index: 2;
+}
+
+#c {
+    z-index: 1;
+}
 .name {
     text-align: center;
     width: 100%;
