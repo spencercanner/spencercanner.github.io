@@ -11,31 +11,45 @@
 
 
     <script type='text/javascript'>
-    window.onload=function(){
-        var img = document.getElementById("scicon");
-
-        var c = document.getElementById('c').getContext('2d');
-        c.webkitImageSmoothingEnabled=true;
-        c.imageSmoothingEnabled=true;
-        c.translate(0.5, 0.5);
-        c.drawImage(img, 25, 25, 50, 50 * img.height / img.width);
-        var duration = 900;
-        var delay = 10;
-        var stepT = duration/delay; // steps needed
-        var cT = 0; // step counter
-        var end = 100; // endpoint in percent
-        var int = setInterval(function(){
-
-            c.strokeStyle = 'white';
-            c.beginPath();
-            c.arc(50, 50, 40, -.5*Math.PI, (-.5*Math.PI + 2*Math.PI / 100 * end * cT / stepT));
-            c.lineWidth = 8;
-            c.stroke();
-            if(++cT>stepT){
-                clearInterval(int);
+        
+        window.onload=function(){
+            var img = document.getElementById('scicon');
+            var canvas = document.getElementById('canvasIcon');
+            var ctx = canvas.getContext('2d');
+            ctx.webkitImageSmoothingEnabled = true;
+            ctx.imageSmoothingEnabled = true;
+            drawIcon(img, ctx);
+            canvas.onmouseover = function () {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.translate(-0.5,-0.5);
+                drawIcon(img, ctx);
+            };
+            canvas.onclick = function () {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.translate(-0.5,-0.5);
+                drawIcon(img, ctx);
             }
-        },delay);
-    }
+        };
+
+        var drawIcon = function(img, ctx) {
+            ctx.drawImage(img, 25, 25, 100, 100 * img.height / img.width);
+            var duration = 700;
+            var delay = 20;
+            var step = duration/delay;
+            var start = 0;
+            var end = 100;
+            var int = setInterval(function(){
+                ctx.strokeStyle = 'white';
+                ctx.beginPath();
+                ctx.arc(75, 75, 68, -.5*Math.PI, (-.5*Math.PI + 2*Math.PI / 100 * end * start / step));
+                ctx.lineWidth = 12;
+                ctx.stroke();
+                if(++start>step){
+                    clearInterval(int);
+                }
+            },delay);
+            ctx.translate(0.5,0.5);
+        }
     </script>
 </head>
 <body>
@@ -44,7 +58,9 @@
 
     <!--top-->
     <div class="top">
-        <div class="topBackground"></div>
+        <div class="topBackground">
+            <img class="topImage" src="orion.jpeg">
+        </div>
         <div class="topContainer">
             <div class="name">
                 <span class="titleText">Spencer Canner is a:</span>
@@ -55,9 +71,8 @@
             </div>
         </div>
         <div class="topIcon">
-
-            <canvas id="c" width="100" height="100">
-                <img id="scicon" class="personalIcon" src="icons/scicon_white.png">
+            <canvas id="canvasIcon" width="150" height="150">
+                <img id="scicon" src="icons/scicon_white.png" class="personalIcon">
             </canvas>
         </div>
     </div>
