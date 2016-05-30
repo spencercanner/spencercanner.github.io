@@ -32,7 +32,18 @@
         context.strokeStyle = 'white';
         context.shadowOffsetX = 0;
         context.shadowOffsetY = 0;
-
+        canvas.onclick = function () {
+            if (curPerc == endPercent) {
+                curPerc = 0;
+                animate();
+            }
+        };
+        canvas.onmouseover = function () {
+            if (curPerc == endPercent) {
+                curPerc = 0;
+                animate();
+            }
+        };
 
         function animate(current) {
             context.clearRect(0, 0, canvas.width, canvas.height);
@@ -46,6 +57,7 @@
                     animate(curPerc / 100)
                 });
             }
+
         }
 
         animate();
