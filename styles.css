@@ -119,9 +119,21 @@ h4 {
     text-align: center;
 }
 
+.phone{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 500px;
+}
+
 .screenshot {
-    width: 20%;
-    margin: 2.2%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 1px;
+    top: 68px;
+    width: 321px;
 }
 
 .badge {
@@ -247,10 +259,6 @@ h4 {
     }
     .innerContent {
         padding: 0;
-    }
-    .screenshot {
-        width: 40%;
-        padding: 2.5%;
     }
 }
 

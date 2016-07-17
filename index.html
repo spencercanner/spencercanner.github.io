@@ -61,6 +61,28 @@
         }
 
         animate();
+
+        function displayNextImage() {
+            pos = (pos === images.length - 1) ? 0 : pos + 1;
+            document.getElementById("screenshot").src = images[pos];
+        }
+
+        function displayPreviousImage() {
+            pos = (pos <= 0) ? images.length - 1 : pos - 1;
+            document.getElementById("screenshot").src = images[pos];
+        }
+
+        function startTimer() {
+            setInterval(displayNextImage, 3000);
+        }
+
+        var images = [];
+        var pos = -1;
+        images[1] = "./icons/Screenshot_2015-09-12-23-44-12.png";
+        images[2] = "./icons/Screenshot_2015-09-12-23-44-12.png";
+        images[3] = "./icons/Screenshot_2015-09-12-23-44-12.png";
+        images[0] = "./icons/Screenshot_2015-09-12-23-48-08.png";
+        startTimer();
     }
     </script>
 </head>
@@ -92,7 +114,6 @@
         <div class="content">
             <div class="about even">
                 <h1>About Me</h1>
-
                 <div class="innerContent">
                     <h3>I am an Industrial Engineering Student at the University of Toronto. I am very hardworking with
                         a passionate
@@ -134,14 +155,13 @@
             <div class="projects even">
                 <h1>Projects</h1>
 
-                <div class="innerContent">
+                <div class="innerContent center">
                     <h2 class="center">Converter Helper</h2><br>
                     <h3 class="center">Created for Personal Convenience</h3>
-                    <img class="screenshot" src="./icons/Screenshot_2015-09-12-23-48-08.png">
-                    <img class="screenshot" src="./icons/Screenshot_2015-09-12-23-45-52.png">
-                    <img class="screenshot" src="./icons/Screenshot_2015-09-12-23-45-29.png">
-                    <img class="screenshot" src="./icons/Screenshot_2015-09-12-23-44-12.png">
-
+                    <div style="position: relative; width: 100%;" class="center">
+                        <img src="images/nexus5-blank.png" class="phone"/>
+                        <img id="screenshot" src="./icons/Screenshot_2015-09-12-23-44-12.png" class="screenshot"/>
+                    </div>
                     <h3 class="center">Simple offline app to convert between common liquid units<br> <br>
                         <a href='https://play.google.com/store/apps/details?id=com.spencercanner.converter&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
                             <img alt='Get it on Google Play' class="badge" src='images/google-play-badge.png'/>
