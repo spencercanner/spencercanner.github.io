@@ -63,20 +63,38 @@
         animate();
 
         function displayNextImage() {
-            pos = (pos === images.length - 1) ? 0 : pos + 1;
-            document.getElementById("screenshot").src = images[pos];
+            posAndroid = (posAndroid === android.length - 1) ? 0 : posAndroid + 1;
+            document.getElementById("screenshot").src = android[posAndroid];
+            posPebble = (posPebble === pebbleOG.length - 1) ? 0 : posPebble + 1;
+            document.getElementById("pebbleScreenshot1").src = pebbleOG[posPebble];
+            document.getElementById("pebbleScreenshot2").src = pebbleTime[posPebble];
+            document.getElementById("pebbleScreenshot3").src = pebbleRound[posPebble];
         }
 
         function startTimer() {
-            setInterval(displayNextImage, 3000);
+            setInterval(displayNextImage, 4000);
+
         }
 
-        var images = [];
-        var pos = -1;
-        images[1] = "./icons/Screenshot_2015-09-12-23-45-52.png";
-        images[2] = "./icons/Screenshot_2015-09-12-23-45-29.png";
-        images[3] = "./icons/Screenshot_2015-09-12-23-44-12.png";
-        images[0] = "./icons/Screenshot_2015-09-12-23-48-08.png";
+        var android = [];
+        var pebbleOG = [];
+        var pebbleTime = [];
+        var pebbleRound = [];
+        var posAndroid = -1;
+        var posPebble = -1;
+        android[1] = "./images/Screenshot_2015-09-12-23-45-52.png";
+        android[2] = "./images/Screenshot_2015-09-12-23-45-29.png";
+        android[3] = "./images/Screenshot_2015-09-12-23-44-12.png";
+        android[0] = "./images/Screenshot_2015-09-12-23-48-08.png";
+        pebbleOG[1] = "./images/OG-screenshot2.png";
+        pebbleOG[2] = "./images/OG-screenshot3.png";
+        pebbleOG[0] = "./images/OG-screenshot1.png";
+        pebbleTime[1] = "./images/time-screenshot2.png";
+        pebbleTime[2] = "./images/time-screenshot3.png";
+        pebbleTime[0] = "./images/time-screenshot1.png";
+        pebbleRound[1] = "./images/round-screenshot2.png";
+        pebbleRound[2] = "./images/round-screenshot3.png";
+        pebbleRound[0] = "./images/round-screenshot1.png";
         startTimer();
     }
     </script>
@@ -155,13 +173,41 @@
                     <h3 class="center">Created for Personal Convenience</h3>
                     <div style="position: relative; width: 100%;" class="center">
                         <img src="images/nexus5-blank.png" class="phone"/>
-                        <img id="screenshot" src="./icons/Screenshot_2015-09-12-23-48-08.png" class="screenshot"/>
+                        <img id="screenshot" src="images/Screenshot_2015-09-12-23-48-08.png" class="screenshot"/>
                     </div>
-                    <h3 class="center">Simple offline app to convert between common liquid units<br> <br>
+                    <h3 class="center">Simple offline app to convert between common liquid units<br>
                         <a href='https://play.google.com/store/apps/details?id=com.spencercanner.converter&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
                             <img alt='Get it on Google Play' class="badge" src='images/google-play-badge.png'/>
                         </a>
                     </h3>
+                    <br><br>
+                </div>
+                <div class="innerContent center">
+                    <br><h2 class="center">Pebble Apps</h2><br>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="pebbleOG">
+                                    <img id="pebbleScreenshot1" src="images/OG-screenshot1.png" class="pebbleOGScreenshot"/>
+                                </div>
+                                <h3 class="center">Toronto Maple Leafs</h3>
+                            </td>
+                            <td>
+                                <div class="pebbleTime">
+                                    <img id="pebbleScreenshot2" src="images/time-screenshot1.png" class="pebbleTimeScreenshot"/>
+                                </div>
+                                <br>
+                                <h3 class="center">Euro 2016</h3>
+                            </td>
+                            <td>
+                                <div class="pebbleRound">
+                                    <img id="pebbleScreenshot3" src="images/round-screenshot1.png" class="pebbleRoundScreenshot"/>
+                                </div>
+                                <br>
+                                <h3 class="center">MLB Scoreboard</h3>
+                            </td>
+                        </tr>
+                    </table>
                     <br><br>
                 </div>
             </div>

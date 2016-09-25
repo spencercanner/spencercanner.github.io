@@ -19,7 +19,7 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 40px;
     font-family: 'Ubuntu Light', sans-serif;
     margin: 0;
 }
@@ -135,6 +135,59 @@ h4 {
     top: 68px;
     width: 321px;
 }
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.pebble {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.pebbleOG{
+    margin: auto;
+    background-image: url('images/OG-pebble.png');
+    width: 236px;
+    height: 372px;
+}
+
+.pebbleTime{
+    margin: auto;
+    background-image: url('images/pebble-time.png');
+    width: 244px;
+    height: 350px;
+}
+
+.pebbleRound{
+    margin: auto;
+    background-image: url('images/pebble-round.png');
+    width: 251px;
+    height: 350px;
+}
+
+.pebbleOGScreenshot{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 104px;
+
+}
+
+.pebbleTimeScreenshot{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 91px;
+
+}
+
+.pebbleRoundScreenshot {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 86px;
+}
+
 
 .badge {
     height: 110px;
@@ -260,9 +313,24 @@ h4 {
     .innerContent {
         padding: 0;
     }
+    tr {
+        display: table;
+        width: 100%;
+    }
+    td {
+        display: table-row;
+        width: 100%;
+    }
 }
 
 /*mobile*/
 @media only screen and (max-width: 500px) {
-
+    tr {
+        display: table;
+        width: 100%;
+    }
+    td {
+        display: table-row;
+        width: 100%;
+    }
 }
