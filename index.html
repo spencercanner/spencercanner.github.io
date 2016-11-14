@@ -10,94 +10,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="icons/scicon.png"/>
 
 
-    <script type='text/javascript'>
-    (function() {
-        var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-        window.requestAnimationFrame = requestAnimationFrame;
-    })();
-
-    window.onload = function () {
-        var canvas = document.getElementById('canvasIcon');
-        var context = canvas.getContext('2d');
-        var x = canvas.width / 2;
-        var y = canvas.height / 2;
-        var radius = 68;
-        var endPercent = 101;
-        var curPerc = 0;
-        var circ = Math.PI * 2;
-        var quart = Math.PI / 2;
-        var img = document.getElementById('scicon');
-        context.lineWidth = 12;
-        context.strokeStyle = 'white';
-        context.shadowOffsetX = 0;
-        context.shadowOffsetY = 0;
-        canvas.onclick = function () {
-            if (curPerc == endPercent) {
-                curPerc = 0;
-                animate();
-            }
-        };
-        canvas.onmouseover = function () {
-            if (curPerc == endPercent) {
-                curPerc = 0;
-                animate();
-            }
-        };
-
-        function animate(current) {
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            context.drawImage(img, 25, 25, 100, 100 * img.height / img.width);
-            context.beginPath();
-            context.arc(x, y, radius, -(quart), ((circ) * current) - quart, false);
-            context.stroke();
-            curPerc++;
-            if (curPerc < endPercent) {
-                requestAnimationFrame(function () {
-                    animate(curPerc / 100)
-                });
-            }
-
-        }
-
-        animate();
-
-        function displayNextImage() {
-            posAndroid = (posAndroid === android.length - 1) ? 0 : posAndroid + 1;
-            document.getElementById("screenshot").src = android[posAndroid];
-            posPebble = (posPebble === pebbleOG.length - 1) ? 0 : posPebble + 1;
-            document.getElementById("pebbleScreenshot1").src = pebbleOG[posPebble];
-            document.getElementById("pebbleScreenshot2").src = pebbleTime[posPebble];
-            document.getElementById("pebbleScreenshot3").src = pebbleRound[posPebble];
-        }
-
-        function startTimer() {
-            setInterval(displayNextImage, 4000);
-
-        }
-
-        var android = [];
-        var pebbleOG = [];
-        var pebbleTime = [];
-        var pebbleRound = [];
-        var posAndroid = -1;
-        var posPebble = -1;
-        android[1] = "./images/Screenshot_2015-09-12-23-45-52.png";
-        android[2] = "./images/Screenshot_2015-09-12-23-45-29.png";
-        android[3] = "./images/Screenshot_2015-09-12-23-44-12.png";
-        android[0] = "./images/Screenshot_2015-09-12-23-48-08.png";
-        pebbleOG[1] = "./images/OG-screenshot2.png";
-        pebbleOG[2] = "./images/OG-screenshot3.png";
-        pebbleOG[0] = "./images/OG-screenshot1.png";
-        pebbleTime[1] = "./images/time-screenshot2.png";
-        pebbleTime[2] = "./images/time-screenshot3.png";
-        pebbleTime[0] = "./images/time-screenshot1.png";
-        pebbleRound[1] = "./images/round-screenshot2.png";
-        pebbleRound[2] = "./images/round-screenshot3.png";
-        pebbleRound[0] = "./images/round-screenshot1.png";
-        startTimer();
-    }
-    </script>
+    <script src='script.js'></script>
 </head>
 <body>
 
@@ -169,45 +82,66 @@
                 <h1>Projects</h1>
 
                 <div class="innerContent center">
-                    <h2 class="center">Converter Helper</h2><br>
-                    <h3 class="center">Created for Personal Convenience</h3>
-                    <div style="position: relative; width: 100%;" class="center">
-                        <img src="images/nexus5-blank.png" class="phone"/>
-                        <img id="screenshot" src="images/Screenshot_2015-09-12-23-48-08.png" class="screenshot"/>
-                    </div>
-                    <h3 class="center">Simple offline app to convert between common liquid units<br>
-                        <a href='https://play.google.com/store/apps/details?id=com.spencercanner.converter&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-                            <img alt='Get it on Google Play' class="badge" src='images/google-play-badge.png'/>
-                        </a>
-                    </h3>
-                    <br><br>
+                    <!--<h2 class="center">Converter Helper</h2><br>-->
+                    <!--<h3 class="center">Created for Personal Convenience</h3>-->
+                    <!--<div style="position: relative; width: 100%;" class="center">-->
+                        <!--<img src="images/nexus5-blank.png" class="phone"/>-->
+                        <!--<img id="screenshot" src="images/Screenshot_2015-09-12-23-48-08.png" class="screenshot"/>-->
+                    <!--</div>-->
+                    <!--<h3 class="center">Simple offline app to convert between common liquid units<br>-->
+                        <!--<a href='https://play.google.com/store/apps/details?id=com.spencercanner.converter&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>-->
+                            <!--<img alt='Get it on Google Play' class="badge" src='images/google-play-badge.png'/>-->
+                        <!--</a>-->
+                    <!--</h3>-->
+                    <!--<br><br>-->
                 </div>
                 <div class="innerContent center">
-                    <br><h2 class="center">Pebble Apps</h2><br>
                     <table>
                         <tr>
                             <td>
-                                <div class="pebbleOG">
-                                    <img id="pebbleScreenshot1" src="images/OG-screenshot1.png" class="pebbleOGScreenshot"/>
+                                <div class="android">
+                                    <img id="androidScreenshot" src="images/AndroidScreen1.png" class="androidScreenshot"/>
                                 </div>
-                                <h3 class="center">Toronto Maple Leafs</h3>
-                                <br><br><br>
                             </td>
+                            <td>
+                                <h2 class="center">Converter Helper</h2><br>
+                                <h3 class="center">Created for personal convenience as a simple offline app to convert between common liquid units</h3>
+                                <a href='https://play.google.com/store/apps/details?id=com.spencercanner.converter&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                                    <img alt='Get it on Google Play' class="badge" src='images/google-play-badge.png'/>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="pebbleOG">
+                                    <img id="pebbleScreenshot1" src="images/PebbleScreen1.png" class="pebbleOGScreenshot"/>
+                                </div>
+                            </td>
+                            <td>
+                                <h2 class="center">Toronto Maple Leafs</h2> <br>
+                                <h3 class="center">Pebble app created to track the team's schedule and score as well as the players' stats</h3>
+                            </td>
+                        </tr>
+                        <tr>
                             <td>
                                 <div class="pebbleTime">
-                                    <img id="pebbleScreenshot2" src="images/time-screenshot1.png" class="pebbleTimeScreenshot"/>
+                                    <img id="pebbleScreenshot2" src="images/TimeScreen1.png" class="pebbleTimeScreenshot"/>
                                 </div>
-                                <br>
-                                <h3 class="center">Euro 2016</h3>
-                                <br><br><br>
                             </td>
                             <td>
+                                <h2 class="center">Euro 2016</h2> <br>
+                                <h3 class="center">App developed to track group standings and matchday results for the 2016 European Football Championship</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <div class="pebbleRound">
-                                    <img id="pebbleScreenshot3" src="images/round-screenshot1.png" class="pebbleRoundScreenshot"/>
+                                    <img id="pebbleScreenshot3" src="images/RoundScreen3.png" class="pebbleRoundScreenshot"/>
                                 </div>
-                                <br>
-                                <h3 class="center">MLB Scoreboard</h3>
-                                <br><br><br>
+                            </td>
+                            <td>
+                                <h2 class="center">MLB Scoreboard</h2> <br>
+                                <h3 class="center">Created to provide play by play updates for all MLB games in progress</h3>
                             </td>
                         </tr>
                     </table>

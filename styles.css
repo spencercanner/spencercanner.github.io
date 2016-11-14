@@ -46,7 +46,6 @@ h4 {
     position: absolute;
     width: 100%;
     height: 100%;
-    /*text-align: center;*/
 }
 
 .background {
@@ -103,7 +102,6 @@ h4 {
 }
 
 .description {
-    /*left: 20%;*/
     text-align: center;
     font-size: 50px;
     font-family: 'Montserrat', sans-serif;
@@ -113,6 +111,7 @@ h4 {
 .innerContent {
     padding-left: 5%;
     padding-right: 5%;
+    min-width: 300px;
 }
 
 .center {
@@ -123,7 +122,7 @@ h4 {
     position: relative;
     top: 0;
     left: 0;
-    width: 500px;
+    width: 300px;
 }
 
 .screenshot {
@@ -133,12 +132,26 @@ h4 {
     left: 0;
     right: 1px;
     top: 68px;
-    width: 321px;
+    width: 221px;
 }
 
 table {
     table-layout: fixed;
+    border-collapse: collapse;
     width: 100%;
+}
+
+td {  
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.borderBottom {
+    border-bottom: 1pt solid black;
+}
+
+.android{
+    margin: auto;
 }
 
 .pebble {
@@ -149,43 +162,30 @@ table {
 
 .pebbleOG{
     margin: auto;
-    background-image: url('images/OG-pebble.png');
-    width: 236px;
-    height: 372px;
 }
 
 .pebbleTime{
     margin: auto;
-    background-image: url('images/pebble-time.png');
-    width: 244px;
-    height: 350px;
 }
 
 .pebbleRound{
     margin: auto;
-    background-image: url('images/pebble-round.png');
-    width: 251px;
-    height: 350px;
+}
+
+.androidScreenshot{
+    width: 300px;
 }
 
 .pebbleOGScreenshot{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 104px;
-
+    width: 225px;
 }
 
 .pebbleTimeScreenshot{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 91px;
-
+    width: 225px;
 }
 
 .pebbleRoundScreenshot {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 86px;
+    width: 225px;
 }
 
 
@@ -222,7 +222,6 @@ table {
     height: 100%;
     position: absolute;
     padding-top: 5%;
-    /*padding-left: 5%;*/
     z-index: 0;
 }
 
@@ -316,6 +315,8 @@ table {
     tr {
         display: table;
         width: 100%;
+        padding-bottom: 15px;
+        padding-top: 15px;
     }
     td {
         display: table-row;
@@ -324,13 +325,21 @@ table {
 }
 
 /*mobile*/
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
     tr {
         display: table;
         width: 100%;
+        margin-bottom: 40px;
+        margin-top: 40px;
     }
     td {
         display: table-row;
         width: 100%;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    #canvasIcon {
+        display: none;
     }
 }
