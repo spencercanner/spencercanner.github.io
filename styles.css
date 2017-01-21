@@ -356,6 +356,9 @@ td {
         font-size: 28px;
         font-family: 'Ubuntu Light', sans-serif;
     }
+    .badge {
+        height: 150px;
+    }
 }
 
 @media only screen and (max-height: 700px) {
