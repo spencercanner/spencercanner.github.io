@@ -178,15 +178,15 @@ td {
 }
 
 .pebbleOGScreenshot{
-    width: 225px;
+    width: 200px;
 }
 
 .pebbleTimeScreenshot{
-    width: 225px;
+    width: 200px;
 }
 
 .pebbleRoundScreenshot {
-    width: 225px;
+    width: 200px;
 }
 
 
@@ -336,6 +336,25 @@ td {
     td {
         display: table-row;
         width: 100%;
+    }
+    .androidScreenshot{
+        width: 400px;
+    }
+
+    .pebbleOGScreenshot{
+        width: 300px;
+    }
+
+    .pebbleTimeScreenshot{
+        width: 300px;
+    }
+
+    .pebbleRoundScreenshot {
+        width: 300px;
+    }
+    h4 {
+        font-size: 28px;
+        font-family: 'Ubuntu Light', sans-serif;
     }
 }
 
