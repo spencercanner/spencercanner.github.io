@@ -359,6 +359,12 @@ td {
     .badge {
         height: 150px;
     }
+    .bigIcon {
+        font-size: 100px;
+        color: #000;
+        margin-right: 50px;
+
+    }
 }
 
 @media only screen and (max-height: 700px) {
