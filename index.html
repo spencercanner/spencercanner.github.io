@@ -1,162 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+  <head lang="en">
     <meta charset="UTF-8">
     <title>Spencer Canner</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link href='http://fonts.googleapis.com/css?family=Pacifico|Oswald|Montserrat|Ubuntu' rel='stylesheet'
+    <link href='https://fonts.googleapis.com/css?family=Pacifico|Oswald|Montserrat|Ubuntu' rel='stylesheet'
           type='text/css'>
     <link rel="shortcut icon" type="image/x-icon" href="icons/scicon.png"/>
-
-
     <script src='script.js'></script>
-</head>
-<body>
-
-<div class="wrap">
-
-    <!--top-->
-    <div class="top">
-        <div class="topBackground"></div>
-        <div class="topContainer">
-            <div class="name">
-                <span class="titleText">Spencer Canner is a:</span>
-            </div>
-            <div class="description">
-            <span class="topLine">
-            (Future) Engineer, Music-Enthusiast, Designer, and Developer </span>
-            </div>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <h1 class="name">
+            <span></span>
+            <span></span>
+            <span>s</span>
+            <span>p</span>
+            <span>e</span>
+            <span>n</span>
+            <span>c</span>
+            <span>e</span>
+            <span>r</span>
+            <img class="topImage" src="images/portrait.png"/>
+            <span>c</span>
+            <span>a</span>
+            <span>n</span>
+            <span>n</span>
+            <span>e</span>
+            <span>r</span>
+            <span></span>
+            <span></span>
+        </h1>
+        <div class="description">
+          <span>frontend developer</span>
+          <span>engineer</span>
+          <span>music enthusiast</span>
         </div>
-        <div class="topIcon">
-            <canvas id="canvasIcon" width="150" height="150">
-                <img id="scicon" src="icons/scicon_white.png" class="personalIcon">
-            </canvas>
+        <div class="topLinks"> 
+          <a class="resumeLink" target="_blank" href="spencer_canner_resume.pdf">resume</a>
         </div>
-    </div>
-
-    <!--about me    -->
-    <div class="container">
-        <div class="content">
-            <div class="about even">
-                <h1>About Me</h1>
-                <div class="innerContent">
-                    <h3>I am an Industrial Engineering Student at the University of Toronto. I am very hardworking with
-                        a passionate
-                        attitude towards everything I create. Every project I take on, big or small, is crafted with a
-                        strong attention to detail
-                        and I am always proud of the finished product. I am a quick and avid learner, interested in
-                        absorbing as much knowledge
-                        as possible.</h3>
-                    <br>
-
-                    <h3>I am very focused on technology, as it is an extremely powerful tool. Its ability to have such
-                        a substantial impact on
-                        society drives me to dive deeper into this field. Specifically, areas such as UI and UX are of
-                        great interest to myself as they
-                        deal with how people use technology, and consequently the extent to which it has an effect in
-                        their lives.
-                    </h3>
-                    <br>
-
-                    <h3>Outside of academics and tech, I am also very interested in music. Having grown up in an
-                        environment with an abundance of musical
-                        instruments, and pursuing my high school education at an arts school, music has become an
-                        essential part of my life. I believe that
-                        my history with music has lead me to become a very creative person, and consequently has given
-                        me a unique outlook on problem solving.
-                        This has proven to be useful in tackling many problems faced throughout my academic career, as
-                        well as in engineering.</h3>
-                </div>
-            </div>
-            <div class="resume odd">
-                <h1>Resume</h1>
-
-                <div class="innerContent">
-                    <h3>View my <a href="spencer_canner_resume.pdf">resume</a></h3>
-                </div>
-            </div>
-
-
-            <div class="projects even">
-                <h1>Projects</h1>
-                <div class="innerContent center">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="android">
-                                    <img id="androidScreenshot" src="images/AndroidScreen1.png" class="androidScreenshot"/>
-                                </div>
-                            </td>
-                            <td>
-                                <h2 class="center">Converter Helper</h2>
-                                <h3 class="center">Created for personal convenience as a simple offline app to convert between common liquid units</h3>
-                                <a href='https://play.google.com/store/apps/details?id=com.spencercanner.converter&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-                                    <img alt='Get it on Google Play' class="badge" src='images/google-play-badge.png'/>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="pebbleOG">
-                                    <img id="pebbleScreenshot1" src="images/PebbleScreen1.png" class="pebbleOGScreenshot"/>
-                                </div>
-                            </td>
-                            <td>
-                                <h2 class="center">Toronto Maple Leafs</h2>
-                                <h3 class="center">Pebble app created to track the team's schedule and score as well as the players' stats</h3>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="pebbleTime">
-                                    <img id="pebbleScreenshot2" src="images/TimeScreen1.png" class="pebbleTimeScreenshot"/>
-                                </div>
-                            </td>
-                            <td>
-                                <h2 class="center">Euro 2016</h2>
-                                <h3 class="center">App developed to track group standings and matchday results for the 2016 European Football Championship</h3>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="pebbleRound">
-                                    <img id="pebbleScreenshot3" src="images/RoundScreen3.png" class="pebbleRoundScreenshot"/>
-                                </div>
-                            </td>
-                            <td>
-                                <h2 class="center">MLB Scoreboard</h2>
-                                <h3 class="center">Created to provide play by play updates for all MLB games in progress</h3>
-                            </td>
-                        </tr>
-                    </table>
-                    <br><br>
-                </div>
-            </div>
-
-            <div class="contact odd">
-                <h1>Contact Me</h1>
-
-                <div class="innerContent">
-                    <h3>m: (647)-994-0710</h3>
-
-                    <h3>e: <a href="mailto:spencer.canner@gmail.com">spencer.canner@gmail.com</a></h3>
-                    <a class="bigIcon" href="https://github.com/spencercanner"><i class="fa fa-github-square"></i></a>
-                    <a class="bigIcon" href="https://ca.linkedin.com/pub/spencer-canner/93/53/189"><i
-                            class="fa fa-linkedin"></i></a>
-                    <a class="bigIcon" href="https://www.behance.net/spencercanner"><i
-                            class="fa fa-behance"></i></a>
-                </div>
-            </div>
+      </div>
+      <div class="content">
+        <div class="projects even">
+          <h1>Projects</h1>
+          <div class="innerContent center">
+            <h2 class="center">Converter Helper</h2>
+            <h3 class="center">Created for personal convenience as a simple offline app to convert between common liquid units</h3>
+            <a href='https://play.google.com/store/apps/details?id=com.spencercanner.converter&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+              <img alt='Get it on Google Play' class="badge" src='images/google-play-badge.png'/>
+            </a>
+            <h2 class="center">Toronto Maple Leafs</h2>
+            <h3 class="center">Pebble app created to track the team's schedule and score as well as the players' stats</h3>
+            <h2 class="center">Euro 2016</h2>
+            <h3 class="center">App developed to track group standings and matchday results for the 2016 European Football Championship</h3>
+            <h2 class="center">MLB Scoreboard</h2>
+            <h3 class="center">Created to provide play by play updates for all MLB games in progress</h3>
+          </div>
         </div>
+        <div class="contact odd">
+          <h1>Contact Me</h1>
+
+          <div class="innerContent">
+              <h3>m: (647)-994-0710</h3>
+              <h3>e: <a href="mailto:spencer.canner@gmail.com">spencer.canner@gmail.com</a></h3>
+              <a class="bigIcon" href="https://github.com/spencercanner"><i class="fa fa-github-square"></i></a>
+              <a class="bigIcon" href="https://ca.linkedin.com/pub/spencer-canner/93/53/189"><i
+                      class="fa fa-linkedin"></i></a>
+              <a class="bigIcon" href="https://www.behance.net/spencercanner"><i
+                      class="fa fa-behance"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+          <h4 class="bottomText">Imagined and Coded with <i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i> by
+              Spencer Canner</h4>
+      </div>
     </div>
-    <div class="bottom">
-        <h4 class="bottomText">Imagined and Coded with <i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i> by
-            Spencer Canner</h4>
-    </div>
-
-
-</div>
-
-</body>
+  </body>
 </html>
