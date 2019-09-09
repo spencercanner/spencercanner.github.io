@@ -8,14 +8,12 @@ body {
   color: #212B36;
 }
 
-.bigIcon {
-  font-size: 50px;
-  color: #000;
-  margin-right: 20px;
+h1, h2, h3 {
+  padding: 0;
+  margin: 0;
 }
 
 .wrap {
-  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -28,17 +26,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.topIcon {
-  text-align: center;
-  position: relative;
-  top: 40%;
-}
-
-.personalIcon {
-  width: 30px;
-  z-index: 2;
 }
 
 .topImage {
@@ -190,6 +177,7 @@ body {
   grid-gap: 2rem;
   grid-template-rows: auto;
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 
 .topLinks {
@@ -206,7 +194,52 @@ body {
 }
 
 .content {
-  border-top: 3px solid #BF4F4F;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sectionHeader {
+  display: inline-block;
+  color: #212b36;
+  border-bottom: 3px solid #BF4F4F;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.section {
+  max-width: 1000px;
+}
+
+.projectContainer {
+  box-shadow: 0 1px 3px 0 #BF4F4F;
+  padding: 2rem;
+  display: flex;
+  align-items: center
+}
+
+.projectImageContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.projectImage {
+  max-width: 100%;
+}
+
+.projectContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectTitle {
+  font-size: 2rem;
+}
+
+.badge {
+  height: 60px;
 }
 
 .section-container {
@@ -234,103 +267,6 @@ body {
   text-align: center;
 }
 
-.phone{
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 300px;
-}
-
-.screenshot {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 1px;
-  top: 68px;
-  width: 221px;
-}
-
-.borderBottom {
-  border-bottom: 1pt solid black;
-}
-
-.android{
-  margin: auto;
-}
-
-.pebble {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.pebbleOG{
-  margin: auto;
-}
-
-.pebbleTime{
-  margin: auto;
-}
-
-.pebbleRound{
-  margin: auto;
-}
-
-.androidScreenshot{
-  width: 300px;
-}
-
-.pebbleOGScreenshot{
-  width: 210px;
-}
-
-.pebbleTimeScreenshot{
-  width: 210px;
-}
-
-.pebbleRoundScreenshot {
-  width: 210px;
-}
-
-.badge {
-  height: 110px;
-}
-
-.title {
-  float: left;
-  margin-left: 7%;
-  color: #FFFFFF;
-  font-size: 25px;
-  vertical-align: middle;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-  -ms-transform: translateY(-50%); /* IE 9 */
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.menuimg {
-  float: left;
-  position: relative;
-  height: 100%;
-  max-width: 100%;
-}
-
-.main {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  padding-top: 5%;
-  z-index: 0;
-}
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .bottom {
   text-align: center;
   width: 100%;
@@ -347,113 +283,40 @@ body {
   transform: translateY(-50%);
 }
 
-
 .bottomIcon {
-    height: 20px;
-    max-width: 100%;
+  height: 20px;
+  max-width: 100%;
 }
 
 
-/*WIDE SCREENS*/
-@media only screen and (min-width: 1024px){
-    .name{
-        font-size: 84px;
-    }
-    .description{
-    }
-}
-
-/*iPad*/
-@media only screen and (max-width: 768px) {
-    .name{
-        font-size:58px;
-        letter-spacing:0;
-    }
-    .description{
-        font-size:34px;
-        letter-spacing:0;
-    }
-}
-
-
-@media only screen and (max-device-width: 480px) {
-    .wrap {
-        background-attachment: scroll;
-    }
-    .name{
-        font-size: 80px;
-    }
-    .description{
-        font-size: 60px;
-    }
-    h1{
-        font-size: 80px;
-    }
-    h2 {
-        font-size: 50px;
-    }
-    h3 {
-        font-size: 35px;
-    }
-    .innerContent {
-        padding: 0;
-    }
-    tr {
-        display: table;
-        width: 100%;
-        padding-bottom: 15px;
-        padding-top: 15px;
-    }
-    td {
-        display: table-row;
-        width: 100%;
-    }
-}
-
-/*mobile*/
 @media only screen and (max-width: 1000px) {
-    tr {
-        display: table;
-        width: 100%;
-        margin-bottom: 40px;
-        margin-top: 40px;
-    }
-    td {
-        display: table-row;
-        width: 100%;
-    }
-    .androidScreenshot{
-        width: 550px;
-    }
+  .name {
+    font-size: 80px;
+  }
 
-    .pebbleOGScreenshot{
-        width: 300px;
-    }
+  .description{
+    font-size: 3rem;
+  }
 
-    .pebbleTimeScreenshot{
-        width: 300px;
-    }
+  .resumeLink {
+    font-size: 3.5rem;
+  }
 
-    .pebbleRoundScreenshot {
-        width: 300px;
-    }
-    h4 {
-        font-size: 28px;
-        font-family: 'Ubuntu Light', sans-serif;
-    }
-    .badge {
-        height: 150px;
-    }
-    .bigIcon {
-        font-size: 100px;
-        color: #000;
-        margin-right: 50px;
+  .content {
+    padding: 0 4rem;
+  }
 
-    }
-}
+  .sectionHeader {
+    font-size: 3rem;
+  }
 
-@media only screen and (max-height: 700px) {
-    #canvasIcon {
-        display: none;
-    }
+  .projectContainer {
+    flex-direction: column;
+  }
+
+  .projectTitle {
+    font-size: 2.5rem;
+  }
+
+  
 }
